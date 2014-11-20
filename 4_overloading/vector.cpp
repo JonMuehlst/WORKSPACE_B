@@ -13,13 +13,13 @@ vector::vector(double x, double y, double z){
     
 }
 
-vector& vector::operator+ (const vector& v){
+vector vector::operator+ (const vector& v){
     
     
     
 }
 
-vector& vector::operator- (const vector& v){
+vector vector::operator- (const vector& v){
     
     
     
@@ -31,19 +31,19 @@ double vector::operator* (const vector& v){
     
 }
 
-vector& vector::operator* (const double scalar){
+vector vector::operator* (const double scalar){
     
     
     
 }
 
-vector& vector::operator/ (const double scalar){
+vector vector::operator/ (const double scalar){
     
     
     
 }
 
-vector& vector::operator= (const vector& v){
+void vector::operator= (const vector& v){
     
     
     
