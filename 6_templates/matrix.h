@@ -49,8 +49,6 @@ class Matrix
     //------------------------------
     
     // friend binary operators
-    template <typename T>
-    friend const Matrix<T> operator+(const Matrix<T> & lhs, const Matrix<T> & rhs);
     //------------------------------
     
     // friend Demo functions
@@ -151,26 +149,6 @@ void Matrix<Type>::printMatrix()
    }
 }
 
-template<typename T>
-const Matrix<T> operator+(const Matrix<T> & lhs, const Matrix<T> & rhs){
-   
-   assert(lhs.getDimension() == rhs.getDimension());
-   
-   int _dim = lhs.getDimension();
-   
-   Matrix<T> m = Matrix<T>(_dim);
-   
-   for (int i=0; i< _dim; i++)
-   {
-      for(int j=0; j< _dim; j++)
-      {
-	      m.mat[i][j] = lhs.mat[i][j] + rhs.mat[i][j];
-      }
-   }
-   
-   return m;
-   
-}
 
 template<typename Type>
 Matrix<Type>& Matrix<Type>::operator=(const Matrix<Type> & rhs){
